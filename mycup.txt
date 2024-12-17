@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique en Ligne</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f04a00;
+        }
+        #hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            height: 80vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #f04a00;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #333;
+        }
+        #produits, #a-propos, #contact {
+            padding: 50px;
+            text-align: center;
+        }
+        #produits h2, #a-propos h2, #contact h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .produit {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .produit:hover {
+            transform: translateY(-5px);
+        }
+        .produit h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .produit p {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header>
+        <div class="logo">Ma Boutique</div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#a-propos">A Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section id="hero">
+        <h1>Découvrez l'Innovation et la Qualité</h1>
+        <p>Explorez notre gamme exclusive de produits modernes et performants.</p>
+        <a href="#produits" class="btn">Acheter Maintenant</a>
+    </section>
+
+    <!-- Section Produits -->
+    <section id="produits">
+        <h2>Nos Produits</h2>
+        <div class="produit">
+            <h3>Produit 1</h3>
+            <p>Une description attrayante du produit.</p>
+            <p><strong>Prix : 25 €</strong></p>
+            <button class="btn">Ajouter au Panier</button>
+        </div>
+        <div class="produit">
+            <h3>Produit 2</h3>
+            <p>Une description attrayante du produit.</p>
+            <p><strong>Prix : 35 €</strong></p>
+            <button class="btn">Ajouter au Panier</button>
+        </div>
+        <div class="produit">
+            <h3>Produit 3</h3>
+            <p>Une description attrayante du produit.</p>
+            <p><strong>Prix : 45 €</strong></p>
+            <button class="btn">Ajouter au Panier</button>
+        </div>
+        <div class="produit">
+            <h3>Mug Magnétique Auto-Mélangeant</h3>
+            <p>Le mug innovant qui mélange vos boissons automatiquement pour un confort optimal.</p>
+            <p><strong>Prix : 29 €</strong></p>
+            <button class="btn">Ajouter au Panier</button>
+        </div>
+    </section>
+
+    <!-- Section A Propos -->
+    <section id="a-propos">
+        <h2>Notre Mission</h2>
+        <p>Inspirés par l'excellence, nous offrons des produits de qualité pour répondre à tous vos besoins.</p>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-Nous</h2>
+        <form action="#" method="POST">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Ma Boutique. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
